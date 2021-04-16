@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root{
+    --Blue: hsl(223, 87%, 63%);
+
+    --Pale_Blue: hsl(223, 100%, 88%);
+    --Light_Red: hsl(354, 100%, 66%);
+
+    --Gray: hsl(0, 0%, 59%);
+    --Very_Dark_Blue: hsl(209, 33%, 12%);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+}
+.landing-page{
+    width: 100%;
+    height: 100vh;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 50%;
+    height: 100%;
+}
+
+.header{
+    text-align: center;
+    padding: 0 0 35px;
+}
+
+.logo{
+    margin-bottom: 20px;
+}
+
+.header-title{
+    font-size: 36px;
+    color: var(--Gray);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.header-title span{
+    color: var(--Very_Dark_Blue);
+    font-weight: 700;
+}
+
+.header-subtitle{
+    font-size: 16px;
+    color: var(--Very_Dark_Blue);
+    margin-bottom: 25px;
+}
+
+.subsceibe-form{
+    width: 85%;
+    padding: 0 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.subsceibe-form .input-box{
+    width: 55%;
+   
+}
+
+.email{
+    border: 1px solid var(--Pale_Blue);
+    outline: none;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: var(--Very_Dark_Blue);
+    /* margin-bottom: 5px; */
+}
+
+.email:focus{
+    border-color: var(--Very_Dark_Blue);
+}
+
+.email::placeholder{
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--Pale_Blue);
+}
+
+.input-box span{
+    display: none;
+}
+.input-box.invalaid span{
+    display: block;
+    font-weight: 300;
+    font-size: 10px;
+    font-style: italic;
+    color: var(--Very_Dark_Blue);
+}
+
+.subsceibe-form .sub-btn{
+    width: 30%;
+    background-color: var(--Blue);
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 3px 10px var(--Light_Red);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.subsceibe-form .sub-btn:hover{
+    background-color: rgb(79, 125, 243, 0.8);
+}
+
+
+/* ==============hero============= */
+.hero{
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img{
+    width: 80%;
+    height: 100%;
+}
+
+/* ===============footer============ */
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .social-icons{
+    padding: 15px 0 10px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .social-icons a{
+    text-decoration: none;
+    font-size: 10px;
+    color: var(--Blue);
+    border: 1px solid var(--Pale_Blue);
+    border-radius: 50%;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+
+.footer .social-icons a:hover{
+    font-size: 13px;
+    color: #fff;
+    background: var(--Blue);
+}
+
+
+.copywrite{
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--Pale_Blue);
+}
+
+/* =============Media-Query========== */
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 80%;
+        height: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 485px){
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .header{
+        width: 95%;
+        text-align: center;
+        padding: 0 0 35px;
+    }
+    
+    .logo{
+        padding-bottom: 50px;
+    }
+    
+    .header-title{
+        font-size: 28px;
+        color: var(--Gray);
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+    
+    
+    .header-subtitle{
+        font-size: 16px;
+        color: var(--Very_Dark_Blue);
+        margin-bottom: 25px;
+    }
+    
+    .subsceibe-form{
+        width: 95%;
+        padding: 0 5px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .subsceibe-form .input-box{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .subsceibe-form .sub-btn{
+        width: 100%;
+    }
+
+    .hero{
+        width: 90%;
+        height: 30vh;
+        margin: 0 auto;
+    }
+    
+    .hero img{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
